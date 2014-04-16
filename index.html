@@ -18,6 +18,7 @@
 
         <link type="text/css" rel="stylesheet" href="css/annotorious.css" />
         <script type="text/javascript" src="js/annotorious.min.js"></script>
+        <script type="text/javascript" src="js/tei-annotation.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -44,6 +45,8 @@
             anno.addHandler('onAnnotationCreated', function(annotation) {
                 alert(annotation.text);
             });
+
+            anno.addPlugin('TeiAnnotationPlugin', {});
         </script>
         <img src="img/bra10001.jpg" class="annotatable"/><br><br>
         <div class="annotorious-editor" style="position:absolute;z-index:1">
