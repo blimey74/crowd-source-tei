@@ -25,13 +25,10 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!--script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>
+        <script type="text/javascript" src="js/vendor/jquery-1.10.2.min.js"></script>
+        <!--script>
             window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
-        </script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script-->
-
+        </script-->
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!--script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -41,29 +38,13 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script-->
-        <script>
+        <script type="text/javascript">
             anno.addHandler('onAnnotationCreated', function(annotation) {
-                alert(annotation.text);
+                alert(document.getElementById('tei_field_type').value);
             });
 
             anno.addPlugin('TeiAnnotationPlugin', {});
         </script>
         <img src="img/bra10001.jpg" class="annotatable"/><br><br>
-        <div class="annotorious-editor" style="position:absolute;z-index:1">
-            <form>
-                <div class="annotorious-editor-button-container">
-                    <select>
-                        <option selected>Text</option>
-                        <option>Date</option>
-                        <option>Person</option>
-                    </select>
-                </div>
-                <textarea class="annotorious-editor-text" placeholder="Add a Comment..." tabindex="1"></textarea>
-                <div class="annotorious-editor-button-container">
-                    <a class="annotorious-editor-button annotorious-editor-button-cancel" href="javascript:void(0);" tabindex="3">Cancel</a>
-                    <a class="annotorious-editor-button annotorious-editor-button-save" href="javascript:void(0);" tabindex="2">Save</a>
-                </div>
-            </form>
-        </div>
     </body>
 </html>

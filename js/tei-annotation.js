@@ -10,6 +10,6 @@ annotorious.plugin.TeiAnnotationPlugin.prototype.initPlugin = function(anno) {
 annotorious.plugin.TeiAnnotationPlugin.prototype.onInitAnnotator = function(annotator) {
     // A Field can be an HTML string or a function(annotation) that returns a string
     annotator.editor.addField(function(field) {
-        return '<select id="tei_field_type"><option id="tei_text">Text</option></select>'
+        return '<select id="tei_field_type"><option id="p">Text</option><option id="placeName">Place</option><option id="date">Date</option></select>'
     });
 };
